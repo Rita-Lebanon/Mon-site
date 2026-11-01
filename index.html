@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lebanon | لبنان | Liban</title>
+<style>
+  :root { --cedar: #1f5c3a; --red: #c8102e; --sand: #f6f1e7; --ink: #1d2a24; --card: #fffdf8; --line: #d9d0bd; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--sand); color: var(--ink); font-family: "Segoe UI", Tahoma, Arial, sans-serif; line-height: 1.7; }
+  header { background: var(--cedar); color: #fff; padding: 28px 16px 32px; border-bottom: 6px solid var(--red); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+  header .wrap { padding: 0; }
+  .lang { display: flex; gap: 8px; margin-bottom: 20px; }
+  .lang button { font: inherit; color: #fff; background: transparent; border: 2px solid #fff; border-radius: 20px; padding: 4px 16px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: #fff; color: var(--cedar); font-weight: 700; }
+  button:focus-visible { outline: 3px solid #ffd54a; outline-offset: 2px; }
+  h1 { font-size: 3rem; margin: 0; line-height: 1.2; }
+  header p { margin: 8px 0 0; font-size: 1.1rem; max-width: 40em; }
+  section { padding: 32px 0 8px; }
+  h2 { color: var(--cedar); font-size: 1.6rem; margin: 0 0 12px; border-inline-start: 6px solid var(--red); padding-inline-start: 12px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+  .fact { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .fact b { display: block; color: var(--red); font-size: .9rem; }
+  .govs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+  .gov { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .gov h3 { margin: 0 0 4px; color: var(--cedar); font-size: 1.05rem; }
+  .gov p { margin: 0; }
+  .seasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+  .season { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  .photo { height: 190px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .winter .photo { background: linear-gradient(#cfe3f3, #f4f9fd); }
+  .spring .photo { background: linear-gradient(#f8d3df, #e8f4d4); }
+  .summer .photo { background: linear-gradient(#ffe08a, #7fc8e8); }
+  .autumn .photo { background: linear-gradient(#e9a65b, #b5532b); }
+  .season div.txt { padding: 12px 16px 16px; }
+  .season h3 { margin: 0; font-size: 1.3rem; }
+  .months { color: var(--red); font-size: .9rem; margin: 0 0 6px; }
+  .season p { margin: 0; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+  .shot { margin: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  .shot .ph { height: 170px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; background: linear-gradient(#dfe9e3, #f3efe4); }
+  .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .shot figcaption { padding: 8px 12px; }
+  ul.herit { padding: 0; list-style: none; display: grid; gap: 10px; }
+  .herit li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .herit b { color: var(--cedar); }
+  footer { padding: 24px 0 40px; font-size: .9rem; opacity: .85; }
+  @media (max-width: 480px) { .seasons { grid-template-columns: 1fr; } h1 { font-size: 2.3rem; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="lang">
+      <button id="b-en" aria-pressed="true">English</button>
+      <button id="b-ar" aria-pressed="false">عربي</button>
+      <button id="b-fr" aria-pressed="false">Français</button>
+    </div>
+    <h1 id="title">Lebanon</h1>
+    <p id="intro">A small country on the eastern shore of the Mediterranean, bringing together mountains, sea and a very long history.</p>
+  </div>
+</header>
+<main class="wrap">
+  <section><h2 id="t-facts">At a glance</h2><div class="facts" id="facts"><div class="fact"><b>Capital</b>Beirut</div><div class="fact"><b>Area</b>10,452 km²</div><div class="fact"><b>Length</b>about 217 km from north to south</div><div class="fact"><b>Width</b>roughly 30 to 80 km</div><div class="fact"><b>Coastline</b>about 225 km on the Mediterranean</div><div class="fact"><b>Highest peak</b>Qurnat as-Sawda, about 3,088 m</div><div class="fact"><b>Population</b>about 5 to 6 million (estimate, varies by source)</div><div class="fact"><b>Organization</b>8 governorates and 26 districts (aqdiya)</div></div></section>
+  <section><h2 id="t-gallery">Photos</h2><div class="gallery" id="gallery"><figure class="shot"><div class="ph"><img src="images/sea.jpg" alt="The Mediterranean coast" onerror="this.replaceWith(document.createTextNode('🌊'))"></div><figcaption>The Mediterranean coast</figcaption></figure><figure class="shot"><div class="ph"><img src="images/mountains.jpg" alt="The mountains" onerror="this.replaceWith(document.createTextNode('⛰️'))"></div><figcaption>The mountains</figcaption></figure><figure class="shot"><div class="ph"><img src="images/cedars.jpg" alt="The cedars" onerror="this.replaceWith(document.createTextNode('🌲'))"></div><figcaption>The cedars</figcaption></figure><figure class="shot"><div class="ph"><img src="images/people.jpg" alt="The people of Lebanon" onerror="this.replaceWith(document.createTextNode('👥'))"></div><figcaption>The people of Lebanon</figcaption></figure><figure class="shot"><div class="ph"><img src="images/food.jpg" alt="Lebanese food" onerror="this.replaceWith(document.createTextNode('🍽️'))"></div><figcaption>Lebanese food</figcaption></figure><figure class="shot"><div class="ph"><img src="images/baalbek.jpg" alt="Roman temples of Baalbek" onerror="this.replaceWith(document.createTextNode('🏛️'))"></div><figcaption>Roman temples of Baalbek</figcaption></figure><figure class="shot"><div class="ph"><img src="images/flag.jpg" alt="The Lebanese flag" onerror="this.replaceWith(document.createTextNode('🚩'))"></div><figcaption>The Lebanese flag</figcaption></figure></div></section>
+  <section><h2 id="t-dist">Governorates and districts</h2><p id="dist-intro">Lebanon is divided into 8 governorates, which contain 26 districts (aqdiya):</p><div class="govs" id="govs"><div class="gov"><h3>Beirut</h3><p>Beirut</p></div><div class="gov"><h3>Mount Lebanon</h3><p>Jbeil (Byblos), Keserwan, Matn, Baabda, Aley, Chouf</p></div><div class="gov"><h3>North</h3><p>Tripoli, Zgharta, Bsharri, Koura, Batroun, Minieh-Danniyeh</p></div><div class="gov"><h3>Akkar</h3><p>Akkar</p></div><div class="gov"><h3>Beqaa</h3><p>Zahle, Rashaya, West Beqaa</p></div><div class="gov"><h3>Baalbek-Hermel</h3><p>Baalbek, Hermel</p></div><div class="gov"><h3>South</h3><p>Sidon, Zahrani, Tyre</p></div><div class="gov"><h3>Nabatieh</h3><p>Nabatieh, Marjayoun, Hasbaya, Bint Jbeil</p></div></div></section>
+  <section><h2 id="t-seasons">The four seasons</h2><div class="seasons" id="seasons"><article class="season winter"><div class="photo"><img src="images/winter.jpg" alt="Winter" onerror="this.replaceWith(document.createTextNode('❄️'))"></div><div class="txt"><h3>Winter</h3><p class="months">December – February</p><p>The rainy season on the coast, with snow on the mountain peaks. Ski resorts open, such as the Cedars, Faraya and Laqlouq.</p></div></article><article class="season spring"><div class="photo"><img src="images/spring.jpg" alt="Spring" onerror="this.replaceWith(document.createTextNode('🌸'))"></div><div class="txt"><h3>Spring</h3><p class="months">March – May</p><p>The weather is mild and flowers bloom, from almond to orange blossom. It is the best time for outings in nature.</p></div></article><article class="season summer"><div class="photo"><img src="images/summer.jpg" alt="Summer" onerror="this.replaceWith(document.createTextNode('☀️'))"></div><div class="txt"><h3>Summer</h3><p class="months">June – August</p><p>Hot and humid on the coast, cooler in the mountains. The season for swimming and for festivals such as Baalbeck, Byblos and Beiteddine.</p></div></article><article class="season autumn"><div class="photo"><img src="images/autumn.jpg" alt="Autumn" onerror="this.replaceWith(document.createTextNode('🍂'))"></div><div class="txt"><h3>Autumn</h3><p class="months">September – November</p><p>The first rains return and the heat drops. It is the season for harvesting grapes, olives and figs.</p></div></article></div></section>
+  <section><h2 id="t-herit">Heritage</h2><ul class="herit" id="herit"><li><b>The Phoenicians :</b> They built cities such as Byblos, Tyre and Sidon, and their alphabet is an ancestor of many alphabets.</li><li><b>UNESCO sites :</b> Five sites: Baalbek, Byblos, Tyre, Anjar, and the Qadisha Valley with the Cedars of God forest.</li><li><b>The cedar :</b> The cedar is the symbol of Lebanon and appears on its flag.</li><li><b>Food :</b> Tabbouleh, kibbeh, mezze and olive oil are among the best known.</li><li><b>Music and dance :</b> Dabke is a popular group dance, and Lebanese song is rich, including the voice of Fairouz.</li><li><b>Crafts :</b> Glassblowing in Sarafand and soap-making in Tripoli.</li></ul></section>
+  <footer id="note">Figures are approximate. For official data, consult Lebanon’s Central Administration of Statistics. No complete official population census has been held since 1932.</footer>
+</main>
+
+<script>
+// Photos: put 4 files in an "images" folder next to this page:
+// winter.jpg, spring.jpg, summer.jpg, autumn.jpg
+// Gallery photos, same folder: sea.jpg, mountains.jpg, cedars.jpg, people.jpg, food.jpg, baalbek.jpg, flag.jpg
+var SHOTS = [["sea", "🌊"], ["mountains", "⛰️"], ["cedars", "🌲"], ["people", "👥"], ["food", "🍽️"], ["baalbek", "🏛️"], ["flag", "🚩"]];
+var ICONS = { winter: "❄️", spring: "🌸", summer: "☀️", autumn: "🍂" };
+
+var T = {
+  en: {
+    dir: "ltr", title: "Lebanon",
+    intro: "A small country on the eastern shore of the Mediterranean, bringing together mountains, sea and a very long history.",
+    tFacts: "At a glance",
+    tGallery: "Photos",
+    shots: ["The Mediterranean coast", "The mountains", "The cedars", "The people of Lebanon", "Lebanese food", "Roman temples of Baalbek", "The Lebanese flag"],
+    facts: [
+      ["Capital", "Beirut"],
+      ["Area", "10,452 km²"],
+      ["Length", "about 217 km from north to south"],
+      ["Width", "roughly 30 to 80 km"],
+      ["Coastline", "about 225 km on the Mediterranean"],
+      ["Highest peak", "Qurnat as-Sawda, about 3,088 m"],
+      ["Population", "about 5 to 6 million (estimate, varies by source)"],
+      ["Organization", "8 governorates and 26 districts (aqdiya)"]
+    ],
+    tDist: "Governorates and districts",
+    distIntro: "Lebanon is divided into 8 governorates, which contain 26 districts (aqdiya):",
+    govs: [
+      ["Beirut", "Beirut"],
+      ["Mount Lebanon", "Jbeil (Byblos), Keserwan, Matn, Baabda, Aley, Chouf"],
+      ["North", "Tripoli, Zgharta, Bsharri, Koura, Batroun, Minieh-Danniyeh"],
+      ["Akkar", "Akkar"],
+      ["Beqaa", "Zahle, Rashaya, West Beqaa"],
+      ["Baalbek-Hermel", "Baalbek, Hermel"],
+      ["South", "Sidon, Zahrani, Tyre"],
+      ["Nabatieh", "Nabatieh, Marjayoun, Hasbaya, Bint Jbeil"]
+    ],
+    tSeasons: "The four seasons",
+    seasons: [
+      ["winter", "Winter", "December – February", "The rainy season on the coast, with snow on the mountain peaks. Ski resorts open, such as the Cedars, Faraya and Laqlouq."],
+      ["spring", "Spring", "March – May", "The weather is mild and flowers bloom, from almond to orange blossom. It is the best time for outings in nature."],
+      ["summer", "Summer", "June – August", "Hot and humid on the coast, cooler in the mountains. The season for swimming and for festivals such as Baalbeck, Byblos and Beiteddine."],
+      ["autumn", "Autumn", "September – November", "The first rains return and the heat drops. It is the season for harvesting grapes, olives and figs."]
+    ],
+    tHerit: "Heritage",
+    herit: [
+      ["The Phoenicians", "They built cities such as Byblos, Tyre and Sidon, and their alphabet is an ancestor of many alphabets."],
+      ["UNESCO sites", "Five sites: Baalbek, Byblos, Tyre, Anjar, and the Qadisha Valley with the Cedars of God forest."],
+      ["The cedar", "The cedar is the symbol of Lebanon and appears on its flag."],
+      ["Food", "Tabbouleh, kibbeh, mezze and olive oil are among the best known."],
+      ["Music and dance", "Dabke is a popular group dance, and Lebanese song is rich, including the voice of Fairouz."],
+      ["Crafts", "Glassblowing in Sarafand and soap-making in Tripoli."]
+    ],
+    note: "Figures are approximate. For official data, consult Lebanon’s Central Administration of Statistics. No complete official population census has been held since 1932."
+  },
+  ar: {
+    dir: "rtl", title: "لبنان",
+    intro: "بلد صغير على الشاطئ الشرقي للبحر المتوسط، يجمع بين الجبل والبحر والتاريخ العريق.",
+    tFacts: "لمحة سريعة",
+    tGallery: "صور",
+    shots: ["شاطئ البحر المتوسط", "الجبال", "الأرز", "اللبنانيون", "المأكولات اللبنانية", "معابد بعلبك الرومانية", "العلم اللبناني"],
+    facts: [
+      ["العاصمة", "بيروت"],
+      ["المساحة", "10,452 كم²"],
+      ["الطول", "حوالي 217 كم من الشمال إلى الجنوب"],
+      ["العرض", "بين 30 و80 كم تقريباً"],
+      ["الساحل", "حوالي 225 كم على البحر المتوسط"],
+      ["أعلى قمة", "القرنة السوداء، حوالي 3,088 م"],
+      ["عدد السكان", "نحو 5 إلى 6 ملايين نسمة (تقدير يختلف حسب المصدر)"],
+      ["التقسيم الإداري", "8 محافظات و26 قضاءً"]
+    ],
+    tDist: "المحافظات والأقضية",
+    distIntro: "ينقسم لبنان إلى 8 محافظات، وتضم 26 قضاءً:",
+    govs: [
+      ["بيروت", "بيروت"],
+      ["جبل لبنان", "جبيل، كسروان، المتن، بعبدا، عاليه، الشوف"],
+      ["الشمال", "طرابلس، زغرتا، بشري، الكورة، البترون، المنية-الضنية"],
+      ["عكار", "عكار"],
+      ["البقاع", "زحلة، راشيا، البقاع الغربي"],
+      ["بعلبك-الهرمل", "بعلبك، الهرمل"],
+      ["الجنوب", "صيدا، الزهراني، صور"],
+      ["النبطية", "النبطية، مرجعيون، حاصبيا، بنت جبيل"]
+    ],
+    tSeasons: "الفصول الأربعة",
+    seasons: [
+      ["winter", "الشتاء", "كانون الأول – شباط", "فصل الأمطار على الساحل والثلوج على قمم الجبال. تُفتح محطات التزلج مثل الأرز وفاريا واللقلوق."],
+      ["spring", "الربيع", "آذار – أيار", "الطقس معتدل وتتفتح الأزهار، من زهر اللوز إلى زهر الليمون. وهو أجمل وقت للنزهات في الطبيعة."],
+      ["summer", "الصيف", "حزيران – آب", "حار ورطب على الساحل وأبرد في الجبال. موسم السباحة والمهرجانات مثل بعلبك وبيبلوس وبيت الدين."],
+      ["autumn", "الخريف", "أيلول – تشرين الثاني", "تعود الأمطار الأولى وتنخفض الحرارة. موسم قطاف العنب والزيتون والتين."]
+    ],
+    tHerit: "التراث",
+    herit: [
+      ["الفينيقيون", "بنوا مدناً مثل جبيل وصور وصيدا، ومنهم انطلقت الأبجدية الفينيقية التي تعود إليها أبجديات كثيرة."],
+      ["مواقع اليونسكو", "خمسة مواقع: بعلبك، جبيل، صور، عنجر، ووادي قاديشا مع غابة أرز الرب."],
+      ["الأرز", "شجرة الأرز رمز لبنان وهي على علمه."],
+      ["المطبخ", "التبولة والكبة والمازة وزيت الزيتون من أشهر ما يُعرف به المطبخ اللبناني."],
+      ["الموسيقى والرقص", "الدبكة رقصة شعبية جماعية، وللبنان تراث غنائي كبير منه صوت فيروز."],
+      ["الحِرف", "نفخ الزجاج في الصرفند وصناعة الصابون في طرابلس."]
+    ],
+    note: "الأرقام تقريبية. لآخر الأرقام الرسمية راجعوا إدارة الإحصاء المركزي في لبنان. لم يُجرَ إحصاء رسمي شامل للسكان منذ عام 1932."
+  },
+  fr: {
+    dir: "ltr", title: "Liban",
+    intro: "Un petit pays sur la rive est de la Méditerranée, qui réunit montagne, mer et une histoire très ancienne.",
+    tFacts: "En bref",
+    tGallery: "Photos",
+    shots: ["Le littoral méditerranéen", "Les montagnes", "Les cèdres", "Les habitants du Liban", "La cuisine libanaise", "Les temples romains de Baalbek", "Le drapeau libanais"],
+    facts: [
+      ["Capitale", "Beyrouth"],
+      ["Superficie", "10 452 km²"],
+      ["Longueur", "environ 217 km du nord au sud"],
+      ["Largeur", "entre 30 et 80 km environ"],
+      ["Littoral", "environ 225 km sur la Méditerranée"],
+      ["Plus haut sommet", "Qornet es-Saouda, environ 3 088 m"],
+      ["Population", "entre 5 et 6 millions d’habitants (estimation, varie selon les sources)"],
+      ["Organisation", "8 gouvernorats et 26 districts (cazas)"]
+    ],
+    tDist: "Gouvernorats et districts",
+    distIntro: "Le Liban est divisé en 8 gouvernorats, qui comptent 26 districts (aqdiya) :",
+    govs: [
+      ["Beyrouth", "Beyrouth"],
+      ["Mont-Liban", "Jbeil (Byblos), Kesrouan, Metn, Baabda, Aley, Chouf"],
+      ["Nord", "Tripoli, Zgharta, Becharré, Koura, Batroun, Minieh-Danniyeh"],
+      ["Akkar", "Akkar"],
+      ["Békaa", "Zahlé, Rachaya, Békaa-Ouest"],
+      ["Baalbek-Hermel", "Baalbek, Hermel"],
+      ["Sud", "Saïda, Zahrani, Tyr"],
+      ["Nabatieh", "Nabatieh, Marjayoun, Hasbaya, Bint Jbeil"]
+    ],
+    tSeasons: "Les quatre saisons",
+    seasons: [
+      ["winter", "Hiver", "décembre – février", "Saison des pluies sur la côte et de la neige sur les sommets. Les stations de ski ouvrent, comme les Cèdres, Faraya et Laqlouq."],
+      ["spring", "Printemps", "mars – mai", "Le temps est doux et les fleurs s’ouvrent, des amandiers aux orangers. C’est le meilleur moment pour les sorties dans la nature."],
+      ["summer", "Été", "juin – août", "Chaud et humide sur la côte, plus frais en montagne. Saison de la baignade et des festivals comme Baalbeck, Byblos et Beiteddine."],
+      ["autumn", "Automne", "septembre – novembre", "Les premières pluies reviennent et la chaleur baisse. C’est la saison des vendanges, des olives et des figues."]
+    ],
+    tHerit: "Patrimoine",
+    herit: [
+      ["Les Phéniciens", "Ils ont bâti des villes comme Byblos, Tyr et Saïda, et leur alphabet est l’ancêtre de nombreux alphabets."],
+      ["Sites de l’UNESCO", "Cinq sites : Baalbek, Byblos, Tyr, Anjar, et la vallée de Qadisha avec la forêt des cèdres de Dieu."],
+      ["Le cèdre", "Le cèdre est le symbole du Liban et figure sur son drapeau."],
+      ["La cuisine", "Taboulé, kebbé, mezzé et huile d’olive comptent parmi les plus connus."],
+      ["Musique et danse", "La dabké est une danse populaire collective, et la chanson libanaise est riche, avec notamment la voix de Fairouz."],
+      ["Artisanat", "Le soufflage du verre à Sarafand et le savon de Tripoli."]
+    ],
+    note: "Les chiffres sont approximatifs. Pour les données officielles, consultez l’Administration centrale de la statistique du Liban. Aucun recensement officiel complet n’a eu lieu depuis 1932."
+  }
+};
+
+function $(id) { return document.getElementById(id); }
+
+function render(lang) {
+  var d = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = d.dir;
+  $("b-en").setAttribute("aria-pressed", lang === "en");
+  $("b-ar").setAttribute("aria-pressed", lang === "ar");
+  $("b-fr").setAttribute("aria-pressed", lang === "fr");
+  $("title").textContent = d.title;
+  $("intro").textContent = d.intro;
+  $("t-facts").textContent = d.tFacts;
+  $("t-gallery").textContent = d.tGallery;
+  $("t-dist").textContent = d.tDist;
+  $("dist-intro").textContent = d.distIntro;
+  $("t-seasons").textContent = d.tSeasons;
+  $("t-herit").textContent = d.tHerit;
+  $("note").textContent = d.note;
+
+  $("facts").innerHTML = d.facts.map(function (f) {
+    return '<div class="fact"><b>' + f[0] + '</b>' + f[1] + '</div>';
+  }).join("");
+
+  $("gallery").innerHTML = SHOTS.map(function (x, i) {
+    return '<figure class="shot"><div class="ph"><img src="images/' + x[0] + '.jpg" alt="' + d.shots[i] +
+      '" onerror="this.replaceWith(document.createTextNode(\'' + x[1] + '\'))"></div><figcaption>' + d.shots[i] + '</figcaption></figure>';
+  }).join("");
+
+  $("govs").innerHTML = d.govs.map(function (g) {
+    return '<div class="gov"><h3>' + g[0] + '</h3><p>' + g[1] + '</p></div>';
+  }).join("");
+
+  $("seasons").innerHTML = d.seasons.map(function (s) {
+    return '<article class="season ' + s[0] + '"><div class="photo"><img src="images/' + s[0] +
+      '.jpg" alt="' + s[1] + '" onerror="this.replaceWith(document.createTextNode(\'' + ICONS[s[0]] + '\'))"></div>' +
+      '<div class="txt"><h3>' + s[1] + '</h3><p class="months">' + s[2] + '</p><p>' + s[3] + '</p></div></article>';
+  }).join("");
+
+  $("herit").innerHTML = d.herit.map(function (h) {
+    return '<li><b>' + h[0] + ' :</b> ' + h[1] + '</li>';
+  }).join("");
+}
+
+$("b-en").addEventListener("click", function () { render("en"); });
+$("b-ar").addEventListener("click", function () { render("ar"); });
+$("b-fr").addEventListener("click", function () { render("fr"); });
+render("en");
+</script>
+
+
+</body></html>
